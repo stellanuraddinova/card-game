@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Matching Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .cards {
+            perspective: 1000px;
+        }
+        .card {
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .card .front,
+        .card .back {
+            backface-visibility: hidden;
+        }
+        .card .back {
+            transform: rotateY(180deg);
+        }
+        .card.flip .front {
+            transform: rotateY(-180deg);
+        }
+        .card.flip .back {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body class="bg-black h-lvh">
+    <div class="p-[10px] pr-[30px] text-right text-white bg-black">
+        <p class="text-[20px] font-bold">Score: <span id="score">0</span></p>
+    </div>
+    
+        <div class="m-auto p-[10px] bg-white border text-left w-[360px]">
+            <p class="font-medium text-[18px]">Film's name: <span id="filmNames">''</span> </p>
+        </div>
+        <div class="grid grid-cols-3 justify-items-center mt-[50px] w-[1120px] m-auto gap-y-[30px] ">
+                <div class="cards w-48 h-64 " >
+                    <div class="card w-full h-full relative">
+                        <div class="front absolute w-full h-full">
+                            <img src="./assets/img/back-img.jpg" alt="Back Image" class="w-full h-full object-cover">
+                        </div>
+                        <div class="back absolute w-full h-full">
+                            <img src="./assets/img/Black_Mirror_Bandersnatch.jpg " alt="Black Mirror: Bandersnatch" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards w-48 h-64" >
+                    <div class="card w-full h-full relative">
+                        <div class="front absolute w-full h-full">
+                            <img src="./assets/img/back-img.jpg" alt="Back Image" class="w-full h-full object-cover">
+                        </div>
+                        <div class="back absolute w-full h-full">
+                            <img src="./assets/img/divergent.jpg" alt="Divergent" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards w-48 h-64" >
+                    <div class="card w-full h-full relative">
+                        <div class="front absolute w-full h-full">
+                            <img src="./assets/img/back-img.jpg" alt="Back Image" class="w-full h-full object-cover">
+                        </div>
+                        <div class="back absolute w-full h-full">
+                            <img src="./assets/img/inception.jpg" alt="Inception" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards w-48 h-64" >
+                    <div class="card w-full h-full relative">
+                        <div class="front absolute w-full h-full">
+                            <img src="./assets/img/back-img.jpg" alt="Back Image" class="w-full h-full object-cover">
+                        </div>
+                        <div class="back absolute w-full h-full">
+                            <img src="./assets/img/interstellar.jpg" alt="Interstellar" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards w-48 h-64" >
+                    <div class="card w-full h-full relative">
+                        <div class="front absolute w-full h-full">
+                            <img src="./assets/img/back-img.jpg" alt="Back Image" class="w-full h-full object-cover">
+                        </div>
+                        <div class="back absolute w-full h-full">
+                            <img src="./assets/img/lucy.jpg" alt="Lucy" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards w-48 h-64" >
+                    <div class="card w-full h-full relative">
+                        <div class="front absolute w-full h-full">
+                            <img src="./assets/img/back-img.jpg" alt="Back Image" class="w-full h-full object-cover">
+                        </div>
+                        <div class="back absolute w-full h-full">
+                            <img src="./assets/img/maze-runner.jpg" alt="Maze Runner" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
